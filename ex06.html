@@ -1,0 +1,55 @@
+<html>
+<h1>Function</h1>
+
+
+<h2>Basic</h2>
+<ul>
+    <script>
+        function two (){
+            document.write('<li>2-1</li>');
+            document.write('<li>2-2</li>');
+        }
+            document.write('<li>1</li>');
+            two();
+            document.write('<li>3</li>');
+            two();
+            document.write('<li>4</li>');
+            two();
+    </script>
+</ul>
+
+
+<h2>Parameter & Argument</h2>
+<script>
+    function OnePlusOne(){
+        document.write(1+1+'<br>');
+    }
+    OnePlusOne();
+    function sum(left,right){
+        document.write(left+right+'<br>')
+    }
+    sum(2,3); //5가 출력되도록
+    sum(3,4); //7이 출력되도록
+    
+    function sumColorRed(left,right){
+        document.write('<div style="color:red">'+left+right+'</div>')
+    }
+    sumColorRed(2,3);
+
+</script>
+
+
+<h2>Return</h2>
+
+<script>
+function sum2(left,right){
+return (left+right);
+}
+document.write(sum2(2,3));
+document.write('<div style="color:red">'+sum2(2,3)+'</div>');
+document.write('<div style="font-size:3rem">'+sum2(2,3)+'</div>');
+
+</script>
+
+
+</html>

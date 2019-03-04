@@ -4,21 +4,67 @@
 <head>
 <title>Javascript Definition</title>
 <meta charset="utf-8">
+<link rel="stylesheet" href="style.css">
+
+<script>
+  var Links={
+    setColor:function (color){
+    var alist = document.querySelectorAll('a');
+        i=0;
+        while(i<alist.length){
+        alist[i].style.color=color;
+        i=i+1;
+        }
+    }
+  }
+  var Body={
+    setColor:function (color){
+    document.querySelector('body').style.color=color;
+    },
+    setBackgroundColor:function (color){
+    document.querySelector('body').style.backgroundColor=color;
+    }
+  }
+  
+  function nightDayHandler(self){ 
+    var target=document.querySelector('body');
+      if(self.value==='night'){
+        Body.setBackgroundColor('black');
+        Body.setColor('white');
+        self.value='day';
+        Links.setColor('red');
+      } else{
+        Body.setBackgroundColor('white');
+        Body.setColor('black');
+      self.value='night';
+        Links.setColor('blue');
+      }
+  } 
+
+</script>
+
 <head>
 
 <body>
 <a href="index.html"><h1>WEB</h1></a>
+<div id="grid">
+    <ul>
+      <a href="html.html"><li>HTML</li></a>
+      <a href="css.html"><li>CSS</li></a>
+      <a href="javascript.html"><li>Javascript</li></a>
+    </ul>
+    <div id="article">
+    <h2>Javascript</h2>
+    <input type="button" value="night" onclick="
+    nightDayHandler(this);
+    ">
 
-  <ul>
-    <a href="html.html"><li>HTML</li></a>
-    <a href="css.html"><li>CSS</li></a>
-    <a href="javascript.html"><li>Javascript</li></a>
-  </ul>
 
-  <h2>Javascript</h2>
-  <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/),[8] often abbreviated as JS, is a high-level,
-    interpreted programming language that conforms to the ECMAScript specification.
-    It is a language that is also characterized as dynamic, weakly typed,
-    prototype-based and multi-paradigm.</p>
+    <p>JavaScript (/ˈdʒɑːvəˌskrɪpt/),[8] often abbreviated as JS, is a high-level,
+      interpreted programming language that conforms to the ECMAScript specification.
+      It is a language that is also characterized as dynamic, weakly typed,
+      prototype-based and multi-paradigm.</p>
+    </div>
+</div>
 <body>
 </html>
